@@ -5,7 +5,7 @@ from common_utils.constants.data_paths import decisions_data_path
 from .sub_processors import get_technical_analysis_score
 
 
-def daily_decisions():
+def make_daily_decisions():
 
     print("Getting available tickers...")
     markets = get_tickers()
@@ -24,5 +24,3 @@ def daily_decisions():
     
     print("Saving the decisions data...")
     df.to_csv(decisions_data_path, index=False)
-
-    print("Done!")

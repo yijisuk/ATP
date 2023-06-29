@@ -1,0 +1,4 @@
+from common_utils.file_date_check import is_file_created_within_12_hours
+from common_utils.constants.data_paths import decisions_data_path
+
+print(is_file_created_within_12_hours(decisions_data_path))
