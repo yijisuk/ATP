@@ -1,28 +1,28 @@
-from .processors.ichimoku_cloud import ichimoku_score
-from .processors.rsi_crossover import rsi_crossover_score
-from .processors.macd_crossover import macd_crossover_score
+import pandas as pd
+
+from common_utils.get_tickers import get_tickers
+from common_utils.constants.data_paths import decisions_data_path
+from .sub_processors import get_technical_analysis_score
 
 
-def get_technical_analysis_score(ticker_str):
+def daily_decisions():
 
-    # Get the scores
-    ichimoku_score_value = ichimoku_score(ticker_str)
-    rsi_crossover_score_value = rsi_crossover_score(ticker_str)
-    macd_crossover_score_value = macd_crossover_score(ticker_str)
+    print("Getting available tickers...")
+    markets = get_tickers()
+    krw_market = markets["krw"]
+    btc_market = markets["btc"]
+    usdt_market = markets["usdt"]
 
-    if ichimoku_score_value is None or rsi_crossover_score_value is None or macd_crossover_score_value is None:
-        return None
+    df = pd.DataFrame({
+        "tickers": krw_market.keys(),
+        "asset_name": krw_market.values(),
+    })
 
-    # Calculate the total score
-    total_score = ichimoku_score_value + rsi_crossover_score_value + macd_crossover_score_value
+    print("Getting technical analysis scores...")
+    df["decision"] = df.apply(lambda row: get_technical_analysis_score(row["tickers"], row["asset_name"]), axis=1)
+    df.dropna(inplace=True)
+    
+    print("Saving the decisions data...")
+    df.to_csv(decisions_data_path, index=False)
 
-    if total_score == 0:
-        decision = "hold"
-    elif total_score < 6:
-        decision = "sell"
-    elif total_score < 10:
-        decision = "buy"
-    else:
-        decision = "strong-buy"
-
-    return decision
+    print("Done!")

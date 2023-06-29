@@ -1,0 +1,94 @@
+tickers,asset_name,decision
+BTC,bitcoin,sell
+ETH,ethereum,sell
+NEO,neo,sell
+MTL,metal,hold
+XRP,ripple,sell
+ETC,ethereum classic,sell
+SNT,status network token,sell
+WAVES,waves,sell
+XEM,nem,hold
+QTUM,qtum,sell
+LSK,lisk,sell
+STEEM,steem,hold
+XLM,lumen,sell
+ARDR,ardor,hold
+ARK,ark,sell
+STORJ,storj,sell
+GRS,groestlcoin,sell
+REP,augur,sell
+ADA,ada,sell
+BTG,bitcoin gold,sell
+ICX,icon,sell
+EOS,eos,sell
+TRX,tron,hold
+SC,siacoin,sell
+ONT,ontology,sell
+ZIL,zilliqa,sell
+POLYX,polymesh,hold
+ZRX,0x protocol,sell
+LOOM,loom network,hold
+BCH,bitcoin cash,sell
+BAT,basic attention token,sell
+RFR,refereum,hold
+CVC,civic,sell
+IOTA,iota,hold
+ONG,ong,sell
+GAS,gas,sell
+ELF,aelf,sell
+KNC,kyber network,hold
+BSV,bitcoin sv,sell
+THETA,theta token,sell
+BTT,bittorrent,sell
+ENJ,enjin,sell
+MANA,decentraland,sell
+ANKR,ankr,sell
+AERGO,aergo,hold
+ATOM,cosmos,sell
+MBL,moviebloc,hold
+WAXP,wax,hold
+HBAR,hedera,hold
+MED,medibloc,hold
+ORBS,orbs,sell
+VET,vechain,sell
+CHZ,chiliz,sell
+DKA,dkargo,sell
+HIVE,hive,sell
+KAVA,kava,sell
+AHT,ahatoken,sell
+LINK,chainlink,sell
+XTZ,tezos,sell
+BORA,bora,hold
+JST,just,sell
+CRO,cronos,hold
+PLA,playdapp,sell
+DOT,polkadot,sell
+STRAX,stratis,sell
+GLM,golem,sell
+SSX,somesing,sell
+META,metadium,hold
+FCT2,firmachain,hold
+SAND,the sandbox,sell
+DOGE,dogecoin,sell
+STRK,strike,sell
+FLOW,flow,sell
+AXS,axie infinity,sell
+STX,stacks,sell
+XEC,ecash,hold
+SOL,solana,sell
+MATIC,polygon,sell
+AAVE,aave,sell
+1INCH,1inch network,sell
+ALGO,algorand,hold
+NEAR,near protocol,sell
+AVAX,avalanche,sell
+CELO,celo,sell
+GMT,stepn,hold
+APT,aptos,hold
+SHIB,shiba inu,hold
+MASK,mask network,sell
+ARB,arbitrum,sell
+EGLD,multiversx,sell
+SUI,sui,hold
+GRT,the graph,sell
+BLUR,blur,sell
