@@ -5,23 +5,27 @@ import ssl
 import smtplib
 import pandas as pd
 
-from common_utils.constants.data_paths import decisions_data_path
 from common_utils.load_agents import get_email_password
 from email_updater.utils.format_date import format_date
 
 
-def send_email(receiver):
+def send_email(receiver, decisions_df):
 
     sender = "ioed2023@gmail.com"
     password = get_email_password()
 
     today = format_date()
 
-    subject = f"{today} Daily Decisions"
+    subject = f"{today} Decisions"
 
-    decisions_df = pd.read_csv(decisions_data_path)
-    decisions_df['line'] = decisions_df.apply(lambda row: f"{row['tickers']}: {row['decision']}\n", axis=1)
-    body_content = "".join(decisions_df['line'])
+    # filter bearish assets
+    decisions_df = decisions_df[(decisions_df['decision'] == 'sell') | (decisions_df['decision'] == 'short')]
+    assets = [f"{ticker} " for ticker in decisions_df['tickers'].tolist()]
+
+    # decisions_df['line'] = decisions_df.apply(lambda row: f"{row['tickers']}: {row['decision']}\n", axis=1)
+    # body_content = "".join(decisions_df['line'])
+
+    body_content = "".join(assets)
     
     body = MIMEText(body_content[:-1], "plain")
 

@@ -6,11 +6,9 @@ def is_file_created_within_12_hours(file_path):
 
     # Get the current time
     current_time = datetime.datetime.now()
-    print(current_time)
 
     # Get the creation time of the file
     creation_time = datetime.datetime.fromtimestamp(os.path.getctime(file_path))
-    print(creation_time)
 
     # Calculate the time difference between the current time and creation time
     time_difference = current_time - creation_time
