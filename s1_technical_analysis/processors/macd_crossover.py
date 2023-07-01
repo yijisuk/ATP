@@ -27,7 +27,8 @@ def macd_crossover_score(price_data):
     crossover_score = 2 if crossover_up_happens else -2 if crossover_down_happens else 0
 
     ### MACD TREND ###
-    macd_changes = price_data['macd'].diff().iloc[-4:]
+    view_length = 12
+    macd_changes = price_data['macd'].diff().iloc[-view_length:]
     is_increasing = all(change > 0 for change in macd_changes)
     is_decreasing = all(change < 0 for change in macd_changes)
 

@@ -7,8 +7,9 @@ def format_date():
 
     day = current_date.day
     month = current_date.strftime("%B")
+    hour = current_date.strftime("%H")
 
-    formatted_date = f"{month} {day}{ordinal_suffix(day)}"
+    formatted_date = f"{month} {day}{ordinal_suffix(day)}, {hour}:00"
 
     return formatted_date
 

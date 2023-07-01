@@ -28,7 +28,8 @@ def rsi_crossover_score(price_data):
     crossover_score = 2 if crossover_up_happens else -2 if crossover_down_happens else 0
 
     ### RSI TREND ###
-    rsi_changes = price_data["rsi"].diff().iloc[-4:]
+    view_length = 12
+    rsi_changes = price_data["rsi"].diff().iloc[-view_length:]
     is_increasing = all(change > 0 for change in rsi_changes)
     is_decreasing = all(change < 0 for change in rsi_changes)
 
