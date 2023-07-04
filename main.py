@@ -1,38 +1,27 @@
-import time
-from datetime import datetime, timedelta
+import pandas as pd
 
 from s1_technical_analysis.main_processor import make_decisions
-from email_updater.main_processor import send_hourly_decisions
+from s2_decision_comparison.main_processor import compare_decisions
+from email_updater.main_processor import send_updated_decisions
+from common_utils.constants.data_paths import DataPaths
+from common_utils.constants.others import Others
+from common_utils.initial_processors.sleeper import Sleeper
 
 if __name__ == "__main__":
 
-    start_hour = 20
-    start_minute = 0
+    dp = DataPaths()
+    ot = Others()
+    sleeper = Sleeper()
 
-    current_time = datetime.now()
-
-    next_start = current_time.replace(hour=start_hour, minute=start_minute, second=0, microsecond=0)
-    if next_start <= current_time:
-        next_start += timedelta(days=1)
-
-    initial_sleep_seconds = (next_start - current_time).total_seconds()
-    time.sleep(initial_sleep_seconds)
+    sleeper.initial_sleep(start_hour=12, start_minute=0)
     
     while True:
-        # TODO: screen the market data on a hourly basis, if a buy signal is detected, send an email to the user
-        # a buy signal is only generated when both the daily and hourly basis signals are "buy"
 
-        # TODO: market data evaluation on a daily basis
+        updated_decisions = make_decisions()
+        previous_decisions = pd.read_csv(dp.latest_decisions_data_path)
 
-        hourly_decisions = make_decisions()
+        revised_decisions = compare_decisions(updated_decisions, previous_decisions)
 
-        email = "offconstruction@gmail.com"
-        send_hourly_decisions(email, hourly_decisions)
+        send_updated_decisions(ot.email_address, revised_decisions)
 
-        # print("Done!")
-        print(f"Results for {datetime.now().strftime('%H')}:00 have been sent.")
-
-        next_hour = (current_time.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1))
-        sleep_seconds = (next_hour - current_time).total_seconds()
-
-        time.sleep(sleep_seconds)
+        sleeper.loop_gap_sleep()

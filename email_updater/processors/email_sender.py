@@ -20,9 +20,9 @@ def send_email(receiver, decisions_df):
 
     # filter bearish assets
     decisions_df = decisions_df[(decisions_df['decision'] == 'sell') | (decisions_df['decision'] == 'short')]
-    assets = [f"{ticker} " for ticker in decisions_df['tickers'].tolist()]
+    assets = [f"{ticker} " for ticker in decisions_df['ticker'].tolist()]
 
-    # decisions_df['line'] = decisions_df.apply(lambda row: f"{row['tickers']}: {row['decision']}\n", axis=1)
+    # decisions_df['line'] = decisions_df.apply(lambda row: f"{row['ticker']}: {row['decision']}\n", axis=1)
     # body_content = "".join(decisions_df['line'])
 
     body_content = "".join(assets)
