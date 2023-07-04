@@ -24,4 +24,4 @@ if __name__ == "__main__":
 
         send_updated_decisions(ot.email_address, revised_decisions)
 
-    sleeper.loop_gap_sleep()
+        sleeper.loop_gap_sleep()
