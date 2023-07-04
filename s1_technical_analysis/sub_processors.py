@@ -4,6 +4,7 @@ from .processors.macd_crossover import macd_crossover_score
 from .utils.get_price_data import get_price_data
 
 from common_utils.constants.decisions import Decisions
+from .utils.decision_map import DecisionMap
 
 
 def aggregate_decisions(ticker_str):
@@ -14,51 +15,13 @@ def aggregate_decisions(ticker_str):
     daily_decision = get_technical_analysis_decision(daily_price_data, view_length=4)
 
     dc = Decisions()
+    dm = DecisionMap()
 
-    ### DAILY EXTREME-BULLISH / BULLISH CASES
-    # daily: extreme-bullish THEN extreme-bearish
-    if daily_decision == dc.EXTREME_BULLISH:
-        final_decision = dc.EXTREME_BULLISH
+    daily_map = dm.decision_map.get(daily_decision, dc.NEUTRAL)
 
-    # daily: bullish & hourly: >= bullish THEN bullish
-    elif daily_decision == dc.BULLISH and \
-        (hourly_decision == dc.BULLISH or hourly_decision == dc.EXTREME_BULLISH):
-        final_decision = dc.BULLISH
-
-    # daily: bullish & hourly: <= neutral THEN extreme-bearish
-    elif daily_decision == dc.BULLISH and \
-        (hourly_decision == dc.EXTREME_BEARISH or hourly_decision == dc.BEARISH or hourly_decision == dc.NEUTRAL):
-        final_decision = dc.EXTREME_BULLISH
-
-    ### DAILY NEUTRAL CASES
-    # daily: neutral & hourly: neutral THEN neutral
-    elif daily_decision == dc.NEUTRAL:
-        final_decision = dc.NEUTRAL
-
-    ### DAILY EXTREME-BEARISH / BEARISH CASES
-    # daily: extreme-bearish & hourly: >= bullish THEN extreme-bullish
-    elif daily_decision == dc.EXTREME_BEARISH and \
-        (hourly_decision == dc.BULLISH or hourly_decision == dc.EXTREME_BULLISH):
-        final_decision = dc.EXTREME_BULLISH
-
-    # daily: extreme-bearish & hourly = neutral THEN bullish
-    elif daily_decision == dc.EXTREME_BEARISH and hourly_decision == dc.NEUTRAL:
-        final_decision = dc.BULLISH
-
-    # daily: extreme-bearish & hourly: <= bearish THEN extreme-bearish
-    elif daily_decision == dc.EXTREME_BEARISH and \
-        (hourly_decision == dc.EXTREME_BEARISH or hourly_decision == dc.BEARISH):
-        final_decision = dc.EXTREME_BEARISH
-
-    # daily: bearish & hourly >= bullish THEN bullish
-    elif daily_decision == dc.BEARISH and \
-        (hourly_decision == dc.BULLISH or hourly_decision == dc.EXTREME_BULLISH):
-        final_decision = dc.BULLISH
-
-    # daily: bearish & hourly: <= neutral THEN bearish
-    elif daily_decision == dc.BEARISH and \
-        (hourly_decision == dc.EXTREME_BEARISH or hourly_decision == dc.BEARISH or hourly_decision == dc.NEUTRAL):
-        final_decision = dc.BEARISH
+    # If the daily_map is a dictionary, then we look up based on the hourly_decision
+    # Otherwise, we use the daily_map as the final decision
+    final_decision = daily_map.get(hourly_decision, daily_map) if isinstance(daily_map, dict) else daily_map
 
     return final_decision
 

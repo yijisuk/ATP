@@ -11,17 +11,17 @@ if __name__ == "__main__":
 
     dp = DataPaths()
     ot = Others()
-    sleeper = Sleeper()
+    # sleeper = Sleeper()
 
-    sleeper.initial_sleep(start_hour=12, start_minute=0)
+    # sleeper.initial_sleep(start_hour=12, start_minute=0)
     
-    while True:
+    # while True:
 
-        updated_decisions = make_decisions()
-        previous_decisions = pd.read_csv(dp.latest_decisions_data_path)
+    updated_decisions = make_decisions()
+    previous_decisions = pd.read_csv(dp.latest_decisions_data_path)
 
-        revised_decisions = compare_decisions(updated_decisions, previous_decisions)
+    revised_decisions = compare_decisions(updated_decisions, previous_decisions)
 
-        send_updated_decisions(ot.email_address, revised_decisions)
+    send_updated_decisions(ot.email_address, revised_decisions)
 
-        sleeper.loop_gap_sleep()
+    # sleeper.loop_gap_sleep()

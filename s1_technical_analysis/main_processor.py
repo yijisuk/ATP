@@ -7,7 +7,7 @@ from common_utils.constants.data_paths import DataPaths
 
 def make_decisions():
 
-    # print("Getting available tickers...")
+    print("Getting available tickers...")
     markets = get_tickers()
     krw_market = markets["krw"]
     # btc_market = markets["btc"]
@@ -18,7 +18,7 @@ def make_decisions():
         "asset_name": krw_market.values(),
     })
 
-    # print("Getting technical analysis scores...")
+    print("Getting technical analysis scores...")
     df["decision"] = df.apply(lambda row: aggregate_decisions(row["ticker"]), axis=1)
     df.dropna(inplace=True)
 
