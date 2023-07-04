@@ -1,0 +1,118 @@
+ticker,asset_name,decision
+BTC,bitcoin,extreme-bearish
+ETH,ethereum,extreme-bearish
+NEO,neo,extreme-bearish
+MTL,metal,neutral
+XRP,ripple,neutral
+ETC,ethereum classic,extreme-bearish
+SNT,status network token,extreme-bearish
+WAVES,waves,neutral
+XEM,nem,neutral
+QTUM,qtum,extreme-bearish
+LSK,lisk,extreme-bearish
+STEEM,steem,neutral
+XLM,lumen,extreme-bearish
+ARDR,ardor,neutral
+ARK,ark,neutral
+STORJ,storj,extreme-bearish
+GRS,groestlcoin,neutral
+REP,augur,neutral
+ADA,ada,extreme-bearish
+SBD,steemdollars,neutral
+POWR,power ledger,neutral
+BTG,bitcoin gold,extreme-bearish
+ICX,icon,extreme-bearish
+EOS,eos,extreme-bearish
+TRX,tron,extreme-bearish
+SC,siacoin,extreme-bearish
+ONT,ontology,neutral
+ZIL,zilliqa,extreme-bearish
+POLYX,polymesh,neutral
+ZRX,0x protocol,extreme-bearish
+LOOM,loom network,neutral
+BCH,bitcoin cash,extreme-bearish
+BAT,basic attention token,extreme-bearish
+IOST,iost,neutral
+RFR,refereum,neutral
+CVC,civic,extreme-bearish
+IQ,iq.wiki,neutral
+IOTA,iota,neutral
+HIFI,hifi finance,neutral
+ONG,ong,neutral
+GAS,gas,neutral
+UPP,sentinel protocol,neutral
+ELF,aelf,neutral
+KNC,kyber network,extreme-bearish
+BSV,bitcoin sv,neutral
+THETA,theta token,neutral
+QKC,quarkchain,neutral
+BTT,bittorrent,neutral
+MOC,moss coin,neutral
+ENJ,enjin,extreme-bearish
+TFUEL,theta fuel,neutral
+MANA,decentraland,extreme-bearish
+ANKR,ankr,extreme-bearish
+AERGO,aergo,neutral
+ATOM,cosmos,extreme-bearish
+TT,thundercore,neutral
+CRE,carry protocol,neutral
+MBL,moviebloc,neutral
+WAXP,wax,neutral
+HBAR,hedera,neutral
+MED,medibloc,neutral
+MLK,mil.k,neutral
+STPT,standard tokenization protocol,neutral
+ORBS,orbs,neutral
+VET,vechain,extreme-bearish
+CHZ,chiliz,extreme-bearish
+STMX,stormx,neutral
+DKA,dkargo,neutral
+HIVE,hive,neutral
+KAVA,kava,neutral
+AHT,ahatoken,neutral
+LINK,chainlink,extreme-bearish
+XTZ,tezos,extreme-bearish
+BORA,bora,neutral
+JST,just,extreme-bearish
+CRO,cronos,extreme-bearish
+TON,ton,neutral
+SXP,sxp,neutral
+HUNT,hunt,neutral
+PLA,playdapp,extreme-bearish
+DOT,polkadot,extreme-bearish
+MVL,mvl,neutral
+STRAX,stratis,neutral
+AQT,alpha quark token,neutral
+GLM,golem,extreme-bearish
+SSX,somesing,neutral
+META,metadium,neutral
+FCT2,firmachain,neutral
+CBK,cobak token,neutral
+SAND,the sandbox,extreme-bearish
+HPO,hippocrat,neutral
+DOGE,dogecoin,extreme-bearish
+STRK,strike,neutral
+PUNDIX,pundi x,neutral
+FLOW,flow,extreme-bearish
+DAWN,dawn protocol,neutral
+AXS,axie infinity,extreme-bearish
+STX,stacks,extreme-bearish
+XEC,ecash,neutral
+SOL,solana,extreme-bearish
+MATIC,polygon,extreme-bearish
+AAVE,aave,extreme-bearish
+1INCH,1inch network,extreme-bearish
+ALGO,algorand,extreme-bearish
+NEAR,near protocol,extreme-bearish
+AVAX,avalanche,extreme-bearish
+T,threshold,neutral
+CELO,celo,neutral
+GMT,stepn,neutral
+APT,aptos,neutral
+SHIB,shiba inu,extreme-bearish
+MASK,mask network,extreme-bearish
+ARB,arbitrum,neutral
+EGLD,multiversx,extreme-bearish
+SUI,sui,neutral
+GRT,the graph,extreme-bearish
+BLUR,blur,neutral
