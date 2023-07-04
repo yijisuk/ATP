@@ -18,7 +18,7 @@ def send_email(receiver, decisions_df):
 
     subject = f"{today} Decisions"
 
-    decisions_df = decisions_df[decisions_df["decision"] == "bullish" | decisions_df["decision"] == "extreme-bullish"]
+    decisions_df = decisions_df[(decisions_df["decision"] == "bullish") | (decisions_df["decision"] == "extreme-bullish")]
 
     if len(decisions_df) == 0:
         body = MIMEText("No bullish decisions for this hour.", "plain")

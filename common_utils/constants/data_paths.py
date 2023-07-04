@@ -11,5 +11,5 @@ class DataPaths():
     # email_password_path = root_path + "/api_keys/email_password.txt"
     email_password_path = os.path.join("api_keys", "email_password.txt")
 
-    # daily_decisions_data_path = root_path + "/data_storage/daily_decisions.csv"
+    # latest_decisions_data_path = root_path + "/data_storage/daily_decisions.csv"
     latest_decisions_data_path = os.path.join("data_storage", "latest_decisions.csv")
