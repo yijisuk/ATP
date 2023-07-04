@@ -1,9 +1,9 @@
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 def format_date():
 
-    current_date = datetime.now()
+    current_date = datetime.now(timezone.utc)
 
     day = current_date.day
     month = current_date.strftime("%B")
