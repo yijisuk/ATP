@@ -1,12 +1,12 @@
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timezone, timedelta
 
 
 class Sleeper():
 
     def __init__(self) -> None:
         
-        self.current_time = datetime.now()
+        self.current_time = datetime.now(timezone.utc)
 
 
     def initial_sleep(self, start_hour, start_minute):
@@ -21,7 +21,7 @@ class Sleeper():
 
     def loop_gap_sleep(self):
 
-        self.current_time = datetime.now()
+        self.current_time = datetime.now(timezone.utc)
         next_hour = (self.current_time.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1))
         sleep_seconds = (next_hour - self.current_time).total_seconds()
 

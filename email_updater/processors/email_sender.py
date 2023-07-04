@@ -18,10 +18,16 @@ def send_email(receiver, decisions_df):
 
     subject = f"{today} Decisions"
 
-    decisions_df['line'] = decisions_df.apply(lambda row: f"{row['ticker']}: {row['decision']}\n", axis=1)
-    body_content = "".join(decisions_df['line'])
-    
-    body = MIMEText(body_content[:-1], "plain")
+    decisions_df = decisions_df[decisions_df["decision"] == "bullish" | decisions_df["decision"] == "extreme-bullish"]
+
+    if len(decisions_df) == 0:
+        body = MIMEText("No bullish decisions for this hour.", "plain")
+
+    else:
+        decisions_df['line'] = decisions_df.apply(lambda row: f"{row['ticker']}: {row['decision']}\n", axis=1)
+        body_content = "".join(decisions_df['line'])
+        
+        body = MIMEText(body_content[:-1], "plain")
 
     em = MIMEMultipart()
     em["From"] = sender
