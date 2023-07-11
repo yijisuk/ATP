@@ -1,40 +1,40 @@
 ticker,asset_name,decision
-BTC,bitcoin,extreme-bearish
-ETH,ethereum,extreme-bearish
-NEO,neo,extreme-bearish
+BTC,bitcoin,extreme-bullish
+ETH,ethereum,neutral
+NEO,neo,neutral
 MTL,metal,neutral
-XRP,ripple,neutral
-ETC,ethereum classic,extreme-bearish
-SNT,status network token,extreme-bearish
-WAVES,waves,neutral
+XRP,ripple,extreme-bullish
+ETC,ethereum classic,extreme-bullish
+SNT,status network token,extreme-bullish
+WAVES,waves,extreme-bullish
 XEM,nem,neutral
-QTUM,qtum,extreme-bearish
-LSK,lisk,extreme-bearish
+QTUM,qtum,neutral
+LSK,lisk,extreme-bullish
 STEEM,steem,neutral
-XLM,lumen,extreme-bearish
+XLM,lumen,neutral
 ARDR,ardor,neutral
 ARK,ark,neutral
-STORJ,storj,extreme-bearish
+STORJ,storj,extreme-bullish
 GRS,groestlcoin,neutral
 REP,augur,neutral
-ADA,ada,extreme-bearish
+ADA,ada,extreme-bullish
 SBD,steemdollars,neutral
 POWR,power ledger,neutral
-BTG,bitcoin gold,extreme-bearish
-ICX,icon,extreme-bearish
-EOS,eos,extreme-bearish
-TRX,tron,extreme-bearish
-SC,siacoin,extreme-bearish
+BTG,bitcoin gold,neutral
+ICX,icon,neutral
+EOS,eos,neutral
+TRX,tron,bearish
+SC,siacoin,extreme-bullish
 ONT,ontology,neutral
-ZIL,zilliqa,extreme-bearish
+ZIL,zilliqa,bearish
 POLYX,polymesh,neutral
-ZRX,0x protocol,extreme-bearish
+ZRX,0x protocol,extreme-bullish
 LOOM,loom network,neutral
-BCH,bitcoin cash,extreme-bearish
-BAT,basic attention token,extreme-bearish
+BCH,bitcoin cash,extreme-bullish
+BAT,basic attention token,extreme-bullish
 IOST,iost,neutral
 RFR,refereum,neutral
-CVC,civic,extreme-bearish
+CVC,civic,extreme-bullish
 IQ,iq.wiki,neutral
 IOTA,iota,neutral
 HIFI,hifi finance,neutral
@@ -42,18 +42,18 @@ ONG,ong,neutral
 GAS,gas,neutral
 UPP,sentinel protocol,neutral
 ELF,aelf,neutral
-KNC,kyber network,extreme-bearish
+KNC,kyber network,neutral
 BSV,bitcoin sv,neutral
 THETA,theta token,neutral
 QKC,quarkchain,neutral
-BTT,bittorrent,neutral
+BTT,bittorrent,bullish
 MOC,moss coin,neutral
-ENJ,enjin,extreme-bearish
+ENJ,enjin,neutral
 TFUEL,theta fuel,neutral
-MANA,decentraland,extreme-bearish
-ANKR,ankr,extreme-bearish
+MANA,decentraland,extreme-bullish
+ANKR,ankr,extreme-bullish
 AERGO,aergo,neutral
-ATOM,cosmos,extreme-bearish
+ATOM,cosmos,extreme-bullish
 TT,thundercore,neutral
 CRE,carry protocol,neutral
 MBL,moviebloc,neutral
@@ -63,56 +63,56 @@ MED,medibloc,neutral
 MLK,mil.k,neutral
 STPT,standard tokenization protocol,neutral
 ORBS,orbs,neutral
-VET,vechain,extreme-bearish
-CHZ,chiliz,extreme-bearish
+VET,vechain,neutral
+CHZ,chiliz,neutral
 STMX,stormx,neutral
 DKA,dkargo,neutral
 HIVE,hive,neutral
 KAVA,kava,neutral
 AHT,ahatoken,neutral
-LINK,chainlink,extreme-bearish
-XTZ,tezos,extreme-bearish
+LINK,chainlink,extreme-bullish
+XTZ,tezos,extreme-bullish
 BORA,bora,neutral
-JST,just,extreme-bearish
-CRO,cronos,extreme-bearish
+JST,just,extreme-bullish
+CRO,cronos,neutral
 TON,ton,neutral
 SXP,sxp,neutral
 HUNT,hunt,neutral
-PLA,playdapp,extreme-bearish
-DOT,polkadot,extreme-bearish
+PLA,playdapp,extreme-bullish
+DOT,polkadot,extreme-bullish
 MVL,mvl,neutral
 STRAX,stratis,neutral
 AQT,alpha quark token,neutral
-GLM,golem,extreme-bearish
+GLM,golem,neutral
 SSX,somesing,neutral
 META,metadium,neutral
 FCT2,firmachain,neutral
 CBK,cobak token,neutral
-SAND,the sandbox,extreme-bearish
+SAND,the sandbox,extreme-bullish
 HPO,hippocrat,neutral
-DOGE,dogecoin,extreme-bearish
+DOGE,dogecoin,neutral
 STRK,strike,neutral
 PUNDIX,pundi x,neutral
-FLOW,flow,extreme-bearish
+FLOW,flow,neutral
 DAWN,dawn protocol,neutral
-AXS,axie infinity,extreme-bearish
-STX,stacks,extreme-bearish
+AXS,axie infinity,neutral
+STX,stacks,bullish
 XEC,ecash,neutral
-SOL,solana,extreme-bearish
-MATIC,polygon,extreme-bearish
-AAVE,aave,extreme-bearish
-1INCH,1inch network,extreme-bearish
-ALGO,algorand,extreme-bearish
-NEAR,near protocol,extreme-bearish
-AVAX,avalanche,extreme-bearish
+SOL,solana,extreme-bullish
+MATIC,polygon,extreme-bullish
+AAVE,aave,extreme-bullish
+1INCH,1inch network,neutral
+ALGO,algorand,bullish
+NEAR,near protocol,extreme-bullish
+AVAX,avalanche,extreme-bullish
 T,threshold,neutral
 CELO,celo,neutral
 GMT,stepn,neutral
 APT,aptos,neutral
-SHIB,shiba inu,extreme-bearish
-MASK,mask network,extreme-bearish
+SHIB,shiba inu,extreme-bullish
+MASK,mask network,extreme-bullish
 ARB,arbitrum,neutral
-EGLD,multiversx,extreme-bearish
+EGLD,multiversx,extreme-bullish
 SUI,sui,neutral
-GRT,the graph,extreme-bearish
+GRT,the graph,extreme-bullish
 BLUR,blur,neutral

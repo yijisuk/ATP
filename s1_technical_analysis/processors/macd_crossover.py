@@ -21,8 +21,8 @@ def macd_crossover_score(price_data, view_length):
     crossover_up = (price_data['macd'] > price_data['macd_signal']) & (price_data['macd'].shift(1) <= price_data['macd_signal'].shift(1))
     crossover_down = (price_data['macd'] < price_data['macd_signal']) & (price_data['macd'].shift(1) >= price_data['macd_signal'].shift(1))
 
-    crossover_up_happens = crossover_up.iloc[-1]
-    crossover_down_happens = crossover_down.iloc[-1]
+    crossover_up_happens = crossover_up.iloc[-2] == False and crossover_up.iloc[-1] == True
+    crossover_down_happens = crossover_down.iloc[-2] == False and crossover_down.iloc[-1] == True
 
     crossover_score = 2 if crossover_up_happens else -2 if crossover_down_happens else 0
 

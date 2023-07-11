@@ -22,8 +22,8 @@ def rsi_crossover_score(price_data, view_length):
     crossover_up = (price_data["rsi"] > price_data["ema"]) & (price_data["rsi"].shift(1) <= price_data["ema"].shift(1))
     crossover_down = (price_data["rsi"] < price_data["ema"]) & (price_data["rsi"].shift(1) >= price_data["ema"].shift(1))
 
-    crossover_up_happens = crossover_up.iloc[-1]
-    crossover_down_happens = crossover_down.iloc[-1]
+    crossover_up_happens = crossover_up.iloc[-2] == False and crossover_up.iloc[-1] == True
+    crossover_down_happens = crossover_down.iloc[-2] == False and crossover_down.iloc[-1] == True
 
     crossover_score = 2 if crossover_up_happens else -2 if crossover_down_happens else 0
 

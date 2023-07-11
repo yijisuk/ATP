@@ -1,5 +1,5 @@
-from common_utils.constants.decisions import Decisions
+from s1_technical_analysis.main_processor import make_decisions
 
-decisions = Decisions()
-
-print(decisions.EXTREME_BULLISH)
+if __name__ == "__main__":
+    decisions = make_decisions()
+    print(decisions)
