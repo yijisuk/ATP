@@ -1,1 +1,8 @@
 .DS_Store
+api_keys/*.txt
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+test.py
